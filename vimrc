@@ -110,7 +110,7 @@ hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 let g:EasyMotion_leader_key = '<Leader>'
 
 " Tagbar
-let g:tagbar_left=1
+let g:tagbar_left=0
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
@@ -147,7 +147,10 @@ let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "right"
+let NERDTreeWinPos = "left"
+autocmd VimEnter * NERDTree 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " nerdcommenter
 let NERDSpaceDelims=1
