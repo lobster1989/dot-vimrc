@@ -9,6 +9,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "------------------
+" Code Format
+"------------------
+Plugin 'rhysd/vim-clang-format'
+
+"------------------
 " Code Completions
 "------------------
 Bundle 'Shougo/neocomplcache'
