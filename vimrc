@@ -75,6 +75,10 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " Plugin settings
 "-----------------
+"Clang-Format
+nmap <leader>f :ClangFormat<CR>
+autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp ClangFormat
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
